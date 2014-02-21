@@ -1,6 +1,7 @@
 module MyMongoid
   module Document
     def self.included(base)
+      MyMongoid.register_model(base)
       base.extend(ClassMethods)
     end
 
